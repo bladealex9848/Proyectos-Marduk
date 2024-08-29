@@ -1,158 +1,157 @@
 import pandas as pd
 
-# Crear la lista de proyectos con sus detalles
 projects = [
     {
         "Ranking": 1,
         "Proyecto": "Sistema de Gestión de Expedientes Electrónicos Judiciales",
-        "Descripción": "Sistema para la gestión digital de expedientes judiciales.",
-        "Problema que soluciona": "Ineficiencia en el manejo de expedientes físicos y dificultad en el acceso a la información.",
-        "Cómo lo soluciona": "Digitaliza y gestiona expedientes, facilitando su acceso, búsqueda y seguimiento.",
-        "Análisis respecto a criterios del concurso": "Altamente alineado con los objetivos del concurso. Impacta positivamente en todas las especialidades judiciales y áreas administrativas. Mejora significativa en 'Justicia al día' y 'Justicia basada en datos'."
+        "Descripción": "Sistema integral para la gestión digital de expedientes judiciales, incluyendo creación de índices electrónicos.",
+        "Problema que soluciona": "Ineficiencia en el manejo de expedientes físicos, dificultad en el acceso a la información y creación manual de índices.",
+        "Cómo lo soluciona": "Digitaliza y gestiona expedientes, facilita su acceso, búsqueda y seguimiento. Automatiza la creación de índices electrónicos.",
+        "Análisis respecto a criterios del concurso": "Piedra angular de la modernización judicial. Impacta directamente en 'Justicia al día' y 'Justicia basada en datos'. Potencial para revolucionar la eficiencia y transparencia en todos los niveles del sistema judicial."
     },
     {
         "Ranking": 2,
-        "Proyecto": "MALLO (MultiAgent LLM Orchestrator)",
-        "Descripción": "Sistema avanzado de orquestación de múltiples agentes de Modelos de Lenguaje de Gran Escala.",
-        "Problema que soluciona": "Complejidad en el manejo de consultas legales y administrativas que requieren múltiples fuentes de conocimiento.",
-        "Cómo lo soluciona": "Coordina varios modelos de IA para proporcionar respuestas precisas y contextuales a consultas complejas.",
-        "Análisis respecto a criterios del concurso": "Altamente innovador con potencial de impacto en todas las áreas judiciales y administrativas. Mejora la eficiencia en la respuesta a consultas complejas, alineándose con 'Justicia cercana' y 'Justicia basada en datos'."
+        "Proyecto": "Gestión Integral de Vigilancia Judicial Administrativa",
+        "Descripción": "Sistema automatizado para la gestión de solicitudes de vigilancia judicial administrativa.",
+        "Problema que soluciona": "Ineficiencia en los procesos de vigilancia judicial administrativa, falta de trazabilidad y seguimiento de solicitudes.",
+        "Cómo lo soluciona": "Implementa un sistema digital integrado para el registro, seguimiento y análisis de solicitudes de vigilancia administrativa.",
+        "Análisis respecto a criterios del concurso": "Crucial para 'Justicia al día' y 'Justicia basada en datos'. Mejora significativa en la eficiencia administrativa y supervisión judicial, fortaleciendo la integridad del sistema."
     },
     {
         "Ranking": 3,
-        "Proyecto": "Consejo Seccional de la Judicatura - Vigilancia Judicial Administrativa",
-        "Descripción": "Sistema para automatizar y mejorar el proceso de vigilancia judicial administrativa.",
-        "Problema que soluciona": "Ineficiencia en los procesos de vigilancia judicial administrativa.",
-        "Cómo lo soluciona": "Automatiza el análisis de solicitudes, realiza control de legalidad y genera proyectos de decisión.",
-        "Análisis respecto a criterios del concurso": "Excelente alineación con los objetivos del concurso. Impacta directamente en la eficiencia administrativa y en la supervisión judicial, beneficiando a todas las especialidades."
+        "Proyecto": "OmniChat: Asistente Virtual Judicial Todo en Uno",
+        "Descripción": "Asistente virtual versátil que integra chatbot básico, chatbot consciente del contexto, chat con documentos, bases de datos SQL y sitios web.",
+        "Problema que soluciona": "Dificultad en el acceso rápido y eficiente a información judicial diversa y compleja.",
+        "Cómo lo soluciona": "Proporciona una interfaz unificada para consultar diferentes fuentes de información judicial de manera conversacional.",
+        "Análisis respecto a criterios del concurso": "Transformador para 'Justicia cercana'. Democratiza el acceso a la información judicial, mejorando la experiencia tanto de profesionales como de ciudadanos."
     },
     {
         "Ranking": 4,
-        "Proyecto": "JudiCalc",
-        "Descripción": "Calculadora de días hábiles para la Rama Judicial de Colombia.",
-        "Problema que soluciona": "Complejidad en el cálculo de plazos judiciales considerando días hábiles y festivos.",
-        "Cómo lo soluciona": "Automatiza el cálculo de días hábiles entre fechas, considerando especialidades judiciales y festivos.",
-        "Análisis respecto a criterios del concurso": "Impacto significativo en todas las especialidades judiciales y áreas administrativas. Mejora la eficiencia en el cumplimiento de plazos y la programación de actividades."
+        "Proyecto": "VigilantIA",
+        "Descripción": "Asistente especializado en Vigilancia Judicial Administrativa basado en IA.",
+        "Problema que soluciona": "Complejidad en la interpretación y aplicación de normativas de vigilancia judicial.",
+        "Cómo lo soluciona": "Ofrece asistencia especializada en temas de vigilancia judicial, interpretando y aplicando normativas de manera precisa.",
+        "Análisis respecto a criterios del concurso": "Esencial para 'Justicia al día' y 'Justicia basada en datos'. Mejora la eficiencia y precisión en procesos de vigilancia, fortaleciendo la integridad judicial."
     },
     {
         "Ranking": 5,
-        "Proyecto": "PDFMaster",
-        "Descripción": "Herramienta para gestionar documentos PDF, incluyendo conversión, resumen y análisis.",
-        "Problema que soluciona": "Dificultad en el manejo y análisis de documentos legales y administrativos en formato PDF.",
-        "Cómo lo soluciona": "Ofrece funciones de conversión, resumen y análisis de documentos PDF.",
-        "Análisis respecto a criterios del concurso": "Relevante para todas las áreas judiciales y administrativas. Mejora la eficiencia en el manejo de documentos, alineándose con 'Justicia al día' y 'Justicia basada en datos'."
+        "Proyecto": "WebNavigatorAI",
+        "Descripción": "Asistente virtual especializado en búsquedas de Internet para información judicial.",
+        "Problema que soluciona": "Dificultad para encontrar y filtrar información legal relevante y actualizada en la web.",
+        "Cómo lo soluciona": "Realiza búsquedas web inteligentes y presenta información relevante de manera rápida y precisa.",
+        "Análisis respecto a criterios del concurso": "Potencia 'Justicia cercana' y 'Justicia basada en datos'. Facilita el acceso a información legal actualizada, mejorando la toma de decisiones judiciales."
     },
     {
         "Ranking": 6,
-        "Proyecto": "ColDisBot",
-        "Descripción": "Asistente especializado en Derecho Disciplinario Colombiano.",
-        "Problema que soluciona": "Complejidad en la comprensión y aplicación del derecho disciplinario.",
-        "Cómo lo soluciona": "Ofrece información precisa sobre legislación disciplinaria, procedimientos y jurisprudencia.",
-        "Análisis respecto a criterios del concurso": "Altamente relevante para los Consejos Seccionales y áreas de Talento Humano. Impacto significativo en la eficiencia de procesos disciplinarios."
+        "Proyecto": "MALLO (MultiAgent LLM Orchestrator)",
+        "Descripción": "Sistema avanzado de orquestación de múltiples agentes de IA para consultas legales complejas.",
+        "Problema que soluciona": "Dificultad en manejar consultas legales que requieren múltiples fuentes de conocimiento y análisis complejos.",
+        "Cómo lo soluciona": "Coordina varios modelos de IA para proporcionar respuestas precisas y contextuales a consultas jurídicas complejas.",
+        "Análisis respecto a criterios del concurso": "Innovación disruptiva para 'Justicia basada en datos'. Potencial para revolucionar la investigación legal y la toma de decisiones complejas en el ámbito judicial."
     },
     {
         "Ranking": 7,
-        "Proyecto": "ProcesAI CGP",
-        "Descripción": "Aplicación para proporcionar información sobre el Código General del Proceso y la Teoría General del Proceso en Colombia.",
-        "Problema que soluciona": "Dificultad en el acceso y comprensión de información procesal.",
-        "Cómo lo soluciona": "Utiliza IA para responder consultas sobre procedimientos legales y teoría procesal.",
-        "Análisis respecto a criterios del concurso": "Relevante para todas las especialidades judiciales, especialmente civil y familia. Mejora el acceso y comprensión de información procesal."
+        "Proyecto": "Asesor Legal Anticorrupción Colombiano",
+        "Descripción": "Herramienta de IA especializada en legislación anticorrupción colombiana.",
+        "Problema que soluciona": "Falta de acceso rápido a información especializada sobre anticorrupción en el contexto colombiano.",
+        "Cómo lo soluciona": "Proporciona información precisa sobre legislación anticorrupción, ética judicial y normativas relacionadas.",
+        "Análisis respecto a criterios del concurso": "Fundamental para 'Justicia cercana' y promoción de la integridad judicial. Impacto significativo en la transparencia y ética del sistema judicial colombiano."
     },
     {
         "Ranking": 8,
-        "Proyecto": "Generador de Turnos Streamlit App",
-        "Descripción": "Aplicación para generar programas de turnos basados en fechas seleccionadas.",
-        "Problema que soluciona": "Complejidad en la gestión de turnos judiciales y administrativos considerando festivos y fines de semana.",
-        "Cómo lo soluciona": "Automatiza la generación de turnos considerando diversos factores temporales.",
-        "Análisis respecto a criterios del concurso": "Impacto significativo en la gestión administrativa y organización de despachos judiciales. Mejora la eficiencia en la asignación de recursos humanos."
+        "Proyecto": "JudiCalc",
+        "Descripción": "Calculadora avanzada de días hábiles para la Rama Judicial de Colombia.",
+        "Problema que soluciona": "Complejidad en el cálculo de plazos judiciales considerando días hábiles, festivos y especialidades judiciales.",
+        "Cómo lo soluciona": "Automatiza el cálculo de días hábiles entre fechas, considerando especialidades judiciales y festivos nacionales.",
+        "Análisis respecto a criterios del concurso": "Esencial para 'Justicia al día'. Mejora la precisión y eficiencia en la gestión de plazos judiciales, reduciendo errores y retrasos procesales."
     },
     {
         "Ranking": 9,
-        "Proyecto": "Asesor Legal en Salud Colombiano",
-        "Descripción": "Herramienta de IA que proporciona información sobre el marco legal y ético del sector salud en Colombia.",
-        "Problema que soluciona": "Dificultad para acceder a información legal especializada en salud.",
-        "Cómo lo soluciona": "Utiliza IA para responder consultas sobre responsabilidad médica, normas del sector salud, y cuestiones éticas.",
-        "Análisis respecto a criterios del concurso": "Relevante para especialidades como familia y laboral, así como para áreas de Bienestar. Mejora el acceso a información legal especializada en salud."
+        "Proyecto": "Generador de Turnos Streamlit App",
+        "Descripción": "Aplicación para generar programas de turnos basados en fechas seleccionadas.",
+        "Problema que soluciona": "Dificultad en la gestión de turnos judiciales considerando festivos y fines de semana.",
+        "Cómo lo soluciona": "Automatiza la generación de turnos considerando diversos factores temporales y laborales.",
+        "Análisis respecto a criterios del concurso": "Contribuye a 'Justicia al día'. Optimiza la distribución de la carga laboral, mejorando la eficiencia y el bienestar de los funcionarios judiciales."
     },
     {
         "Ranking": 10,
-        "Proyecto": "Constitutor Colombiano 1991",
-        "Descripción": "Aplicación para proporcionar información sobre la Constitución Política de Colombia de 1991.",
-        "Problema que soluciona": "Dificultad en el acceso y comprensión de la información constitucional.",
-        "Cómo lo soluciona": "Ofrece consultas interactivas sobre la Constitución utilizando IA.",
-        "Análisis respecto a criterios del concurso": "Relevante para todas las especialidades judiciales y áreas administrativas. Mejora la comprensión y aplicación de principios constitucionales en la administración de justicia."
+        "Proyecto": "PDFMaster",
+        "Descripción": "Herramienta avanzada para gestión de documentos PDF en el ámbito judicial.",
+        "Problema que soluciona": "Dificultad en el manejo, análisis y extracción de información de documentos legales en formato PDF.",
+        "Cómo lo soluciona": "Ofrece funciones de conversión, resumen, análisis y extracción de información de documentos PDF.",
+        "Análisis respecto a criterios del concurso": "Impacta en 'Justicia al día' y 'Justicia basada en datos'. Mejora significativamente la eficiencia en el manejo de documentación legal."
     },
     {
         "Ranking": 11,
-        "Proyecto": "Asistente Virtual (multiexperto)",
-        "Descripción": "Asistente de IA capaz de ayudar en diversos temas y tareas en español.",
-        "Problema que soluciona": "Necesidad de asistencia en múltiples áreas del conocimiento legal y administrativo.",
-        "Cómo lo soluciona": "Proporciona respuestas y asistencia en una amplia gama de temas legales y no legales.",
-        "Análisis respecto a criterios del concurso": "Potencial impacto en todas las áreas, pero requiere adaptación para especializarse más en temas judiciales y administrativos específicos."
+        "Proyecto": "AnalizadorEstadisticoJudicial",
+        "Descripción": "Sistema para análisis automático de datos estadísticos judiciales.",
+        "Problema que soluciona": "Ineficiencia y potenciales errores en el análisis manual de datos estadísticos judiciales.",
+        "Cómo lo soluciona": "Automatiza el procesamiento y análisis de datos estadísticos, generando informes y visualizaciones útiles.",
+        "Análisis respecto a criterios del concurso": "Crucial para 'Justicia basada en datos'. Facilita la toma de decisiones basada en evidencia y la mejora continua del sistema judicial."
     },
     {
         "Ranking": 12,
-        "Proyecto": "Real-Time Emotion Detector",
-        "Descripción": "Detector de emociones en tiempo real utilizando la cámara web.",
-        "Problema que soluciona": "Dificultad en la interpretación de emociones en interacciones judiciales y administrativas.",
-        "Cómo lo soluciona": "Analiza y clasifica emociones en tiempo real a través de video.",
-        "Análisis respecto a criterios del concurso": "Potencial uso en audiencias virtuales y procesos de mediación. Requiere adaptación para cumplir con normativas éticas y de privacidad en el contexto judicial."
+        "Proyecto": "ProcesAI CGP",
+        "Descripción": "Asistente de IA especializado en el Código General del Proceso de Colombia.",
+        "Problema que soluciona": "Dificultad en el acceso y comprensión de información procesal específica de Colombia.",
+        "Cómo lo soluciona": "Proporciona respuestas precisas sobre procedimientos legales y teoría procesal colombiana.",
+        "Análisis respecto a criterios del concurso": "Fortalece 'Justicia cercana' y 'Justicia al día'. Mejora el acceso y comprensión de información procesal crítica para profesionales y ciudadanos."
     },
     {
         "Ranking": 13,
-        "Proyecto": "TranscriptorAV",
-        "Descripción": "Aplicación para transcribir audio y video a texto.",
-        "Problema que soluciona": "Dificultad en la transcripción manual de audiencias y declaraciones.",
-        "Cómo lo soluciona": "Utiliza IA para transcribir automáticamente contenido audiovisual.",
-        "Análisis respecto a criterios del concurso": "Útil para todas las especialidades judiciales. Mejora la eficiencia en la documentación de procesos orales, alineándose con 'Justicia al día'."
+        "Proyecto": "Constitutor Colombiano 1991",
+        "Descripción": "Aplicación interactiva sobre la Constitución Política de Colombia de 1991.",
+        "Problema que soluciona": "Dificultad en el acceso y comprensión de la información constitucional colombiana.",
+        "Cómo lo soluciona": "Ofrece consultas interactivas y explicaciones claras sobre la Constitución utilizando IA.",
+        "Análisis respecto a criterios del concurso": "Fundamental para 'Justicia cercana'. Promueve la educación constitucional y facilita la aplicación de principios constitucionales en la justicia."
     },
     {
         "Ranking": 14,
-        "Proyecto": "UI2HTML",
-        "Descripción": "Convierte interfaces de usuario en código HTML.",
-        "Problema que soluciona": "Complejidad en la creación de interfaces web para sistemas judiciales.",
-        "Cómo lo soluciona": "Automatiza la conversión de diseños de interfaz en código HTML funcional.",
-        "Análisis respecto a criterios del concurso": "Potencial para mejorar el desarrollo de herramientas digitales para la administración de justicia. Requiere adaptación para necesidades específicas del sistema judicial."
+        "Proyecto": "Suite Integral de Procesamiento Audiovisual Judicial",
+        "Descripción": "Sistema avanzado para transcripción, análisis emocional y procesamiento de contenido audiovisual judicial.",
+        "Problema que soluciona": "Dificultades en la transcripción, interpretación y gestión de contenido audiovisual en procesos judiciales.",
+        "Cómo lo soluciona": "Automatiza la transcripción, analiza emociones, divide y mejora archivos de audio/video, y facilita la conversión entre formatos.",
+        "Análisis respecto a criterios del concurso": "Innovador para 'Justicia al día' y 'Justicia basada en datos'. Mejora significativamente el manejo de evidencias audiovisuales y la eficiencia en procesos judiciales virtuales y presenciales."
     },
     {
         "Ranking": 15,
-        "Proyecto": "ImageBackgroundRemover",
-        "Descripción": "Herramienta para eliminar el fondo de imágenes automáticamente.",
-        "Problema que soluciona": "Necesidad de procesar imágenes para su uso en documentos judiciales y administrativos.",
-        "Cómo lo soluciona": "Automatiza la eliminación de fondos en imágenes de manera sencilla.",
-        "Análisis respecto a criterios del concurso": "Utilidad limitada pero potencial para mejorar la presentación de documentos y evidencias visuales en procesos judiciales."
+        "Proyecto": "UI2HTML",
+        "Descripción": "Herramienta para convertir diseños de interfaz en código HTML funcional para sistemas judiciales.",
+        "Problema que soluciona": "Complejidad y tiempo requerido en la creación de interfaces web para sistemas judiciales.",
+        "Cómo lo soluciona": "Automatiza la conversión de diseños de interfaz en código HTML, acelerando el desarrollo de herramientas digitales judiciales.",
+        "Análisis respecto a criterios del concurso": "Contribuye a 'Justicia cercana' al facilitar el desarrollo de interfaces amigables. Acelera la digitalización de servicios judiciales."
     },
     {
         "Ranking": 16,
         "Proyecto": "Acortador de URLs de Enki",
-        "Descripción": "Servicio para acortar y gestionar enlaces web.",
+        "Descripción": "Servicio especializado para acortar y gestionar enlaces web en el ámbito judicial.",
         "Problema que soluciona": "Dificultad en compartir y gestionar URLs largas en comunicaciones judiciales.",
-        "Cómo lo soluciona": "Convierte URLs largas en versiones cortas y fáciles de compartir.",
-        "Análisis respecto a criterios del concurso": "Utilidad para mejorar la comunicación interna y externa en el sistema judicial. Impacto menor pero potencialmente útil para 'Justicia cercana'."
+        "Cómo lo soluciona": "Genera URLs cortas y fáciles de compartir, con seguimiento y análisis de uso.",
+        "Análisis respecto a criterios del concurso": "Mejora 'Justicia cercana' facilitando la comunicación. Potencial para optimizar la difusión de información judicial y legal."
     },
     {
         "Ranking": 17,
-        "Proyecto": "Creador de Libro de Cuentos",
-        "Descripción": "Sistema para crear libros de cuentos infantiles utilizando IA.",
-        "Problema que soluciona": "No directamente relacionado con problemas judiciales o administrativos.",
-        "Cómo lo soluciona": "Automatiza la creación de contenido literario infantil.",
-        "Análisis respecto a criterios del concurso": "Baja relevancia directa para el sistema judicial. Potencial uso en programas de bienestar o educación legal para niños, pero requeriría adaptación significativa."
+        "Proyecto": "Voice-Assistant-GPT Judicial",
+        "Descripción": "Asistente de voz inteligente especializado en temas judiciales.",
+        "Problema que soluciona": "Barreras de accesibilidad a información judicial para personas con limitaciones visuales o de movilidad.",
+        "Cómo lo soluciona": "Proporciona una interfaz de voz para consultas y tareas relacionadas con el sistema judicial.",
+        "Análisis respecto a criterios del concurso": "Fundamental para 'Justicia cercana'. Mejora la accesibilidad e inclusión en el sistema judicial, especialmente para personas con discapacidades."
     },
     {
         "Ranking": 18,
-        "Proyecto": "Voice-Assistant-GPT",
-        "Descripción": "Asistente de voz inteligente basado en GPT-3.",
-        "Problema que soluciona": "Necesidad de interacción por voz con sistemas de información judicial.",
-        "Cómo lo soluciona": "Proporciona interfaz de voz para consultas y tareas relacionadas con el sistema judicial.",
-        "Análisis respecto a criterios del concurso": "Potencial para mejorar la accesibilidad en el sistema judicial, especialmente para personas con discapacidad visual. Requiere adaptación significativa para uso específico en contexto judicial."
+        "Proyecto": "Creador de Libro de Cuentos Judicial",
+        "Descripción": "Sistema para crear contenido educativo infantil sobre temas judiciales y legales.",
+        "Problema que soluciona": "Falta de materiales educativos accesibles sobre el sistema judicial para niños y jóvenes.",
+        "Cómo lo soluciona": "Automatiza la creación de cuentos y materiales educativos que explican conceptos judiciales de manera sencilla y atractiva.",
+        "Análisis respecto a criterios del concurso": "Innovador para 'Justicia cercana'. Promueve la educación legal desde temprana edad, fomentando una cultura de legalidad y comprensión del sistema judicial."
     },
     {
         "Ranking": 19,
-        "Proyecto": "Monitoreo de Presión Arterial",
-        "Descripción": "Aplicación para el seguimiento de la presión arterial.",
-        "Problema que soluciona": "No directamente relacionado con problemas judiciales o administrativos.",
-        "Cómo lo soluciona": "Permite el registro y visualización de mediciones de presión arterial.",
-        "Análisis respecto a criterios del concurso": "Baja relevancia para el sistema judicial. Potencial uso limitado en programas de bienestar para funcionarios judiciales."
+        "Proyecto": "Monitoreo de Presión Arterial para Funcionarios Judiciales",
+        "Descripción": "Aplicación para el seguimiento de la salud cardiovascular de los funcionarios judiciales.",
+        "Problema que soluciona": "Falta de atención a la salud y bienestar de los funcionarios judiciales bajo estrés laboral.",
+        "Cómo lo soluciona": "Permite el registro y seguimiento de la presión arterial, ofreciendo recomendaciones para mantener un estilo de vida saludable.",
+        "Análisis respecto a criterios del concurso": "Contribuye indirectamente a 'Justicia al día'. Mejora el bienestar de los funcionarios judiciales, lo que puede traducirse en un mejor servicio y eficiencia en la administración de justicia."
     }
 ]
 
